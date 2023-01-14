@@ -1,0 +1,32 @@
+body {
+  background-color: rgba(219, 224, 224, 0.884);
+}
+
+.body-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.body-text > h1 {
+  margin: 0;
+}
+.body-text > p {
+  color: rgb(116, 112, 111);
+  margin: 14px 0;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.body-text > h1 > span {
+  color: rgb(20, 139, 114);
+}
+
+.card-wrapper {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
