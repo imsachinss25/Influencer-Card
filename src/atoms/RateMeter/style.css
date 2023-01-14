@@ -29,7 +29,20 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 60px solid black;
-  border-radius: 40%;
+  border-radius: 35%;
+  display: inline-block;
+  position: absolute;
+  transform-origin: bottom;
+  transform: rotate(-90deg);
+  transition: all 4s ease;
+}
+
+.needle-good {
+  transform: rotate(40deg);
+}
+
+.needle-avg {
+  transform: rotate(-40deg);
 }
 
 .rate-meter-wrapper {
@@ -37,4 +50,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+@keyframes speed {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
 }

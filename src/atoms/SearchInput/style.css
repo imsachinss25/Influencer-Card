@@ -3,18 +3,23 @@ input[type="search"] {
   background: transparent;
   margin: 0;
   padding: 7px 8px;
-  font-size: 14px;
+  font-size: 24px;
   color: inherit;
   border: 1px solid transparent;
   border-radius: inherit;
   width: 100%;
+  padding: 12px 0;
+}
+
+input:focus{
+  outline: none;
 }
 
 .search-input-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px;
+  padding: 0px 30px;
   border: 2px solid rgb(20, 139, 114);
   width: 45%;
   background-color: white;
@@ -34,4 +39,5 @@ input[type="search"] {
   font-size: 20px;
   background-color: rgb(19, 170, 163);
   border-radius: 0px 8px 8px 0px;
+  cursor: pointer;
 }

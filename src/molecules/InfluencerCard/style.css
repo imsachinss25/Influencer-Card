@@ -10,7 +10,8 @@
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  padding: 40px 10px 20px 10px
+  padding: 40px 10px 20px 10px;
+  box-shadow: 0px 0px 8px 0 rgba(19, 173, 140, 0.658);
 }
 
 .tag {
@@ -42,6 +43,11 @@
   right: 10px;
   gap: 6px;
   position: absolute;
+  cursor: pointer;
+}
+
+.floating-socials >img {
+  cursor: pointer;
 }
 
 .profile-card-img {
@@ -66,6 +72,7 @@
   border-radius: 100px;
   padding: 6px;
   height: 100px;
+  position: relative;
 }
 .insta-handle {
   padding: 10px 0;
@@ -133,4 +140,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+}
+
+.profile-blob {
+  position: absolute;
+  top: -43px;
+  left: -130%;
+  z-index: -1;
+  transform: rotate(77deg);
+}
+
+div {
+  z-index: 2;
 }

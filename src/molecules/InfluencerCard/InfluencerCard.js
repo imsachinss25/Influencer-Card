@@ -13,6 +13,8 @@ import Comment from "../../atoms/Icons/Comment";
 import RateMeter from "../../atoms/RateMeter/RateMeter";
 import CircularArrow from "../../atoms/Icons/CircularArrow";
 import NeutralFace from "../../atoms/Icons/NeutralFace";
+import Wave from "../../atoms/Icons/Wave";
+import Blob from "../../atoms/Icons/Blob";
 
 const tagIconMapper = {
   good: <SmileIcon />,
@@ -22,6 +24,9 @@ const tagIconMapper = {
 const InfluencerCard = React.memo(({ inflencerData, key }) => {
   return(
     <div className="i-card-wrapper" key={key}>
+      {inflencerData.performance === 'avg' && <section className="wave">
+      <Wave />
+      </section>}
       <div className={`tag tag-${inflencerData.performance}`}>
         {tagIconMapper[inflencerData.performance]}
         {inflencerData.tag}
@@ -32,6 +37,9 @@ const InfluencerCard = React.memo(({ inflencerData, key }) => {
       </div>
       <div className="card-img-wrapper-1">
         <div className="card-img-wrapper-2">
+          <section className="profile-blob">
+          <Blob />
+          </section>
           <img className="profile-card-img" src={inflencerData.profile_pic} alt={inflencerData.name}/>
         </div>
       </div>
@@ -55,13 +63,12 @@ const InfluencerCard = React.memo(({ inflencerData, key }) => {
       </div>
       <div className="engagment-rate-wrapper">
         <h4> Engagment Rate </h4>
-        <RateMeter />
+        <RateMeter performance={inflencerData.performance}/>
         <h1>{inflencerData.engagement_rate}%</h1>
       </div>
       <div className="footer-text">
         To get full report! &nbsp;<span> Login <CircularArrow /></span>
       </div>
-
     </div>
   )
 })
